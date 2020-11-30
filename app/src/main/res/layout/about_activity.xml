@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AboutActivityScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/about">
+
+    <TextView
+        android:id="@+id/appTitleAbout"
+        android:layout_width="316dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/know_your_government"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/poweredBy"
+        android:layout_width="113dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="149dp"
+        android:text="@string/powered_by"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitleAbout" />
+
+    <TextView
+        android:id="@+id/apiAttributionAbout"
+        android:layout_width="300dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="64dp"
+        android:onClick="onClickGoogleApi"
+        android:text="@string/google_civic_information_api"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poweredBy" />
+
+    <TextView
+        android:id="@+id/copyRightInfo"
+        android:layout_width="263dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginEnd="78dp"
+        android:text="@string/_2020_dewone_x_westerfield"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apiAttributionAbout" />
+
+    <TextView
+        android:id="@+id/versionAbout"
+        android:layout_width="83dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="182dp"
+        android:text="@string/version_1_0"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copyRightInfo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

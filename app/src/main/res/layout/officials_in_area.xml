@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/government_position"
+        android:layout_width="319dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/official_title"
+        android:textColor="#8D379C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_politician"
+        android:layout_width="246dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/politician_name_and_party"
+        android:textAlignment="textStart"
+        android:textColor="#8D379C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/government_position" />
+
+    <ImageView
+        android:id="@+id/separate_politicians"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/politician_separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_politician"
+        app:srcCompat="@drawable/separator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

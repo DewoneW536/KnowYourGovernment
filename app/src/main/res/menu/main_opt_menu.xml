@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/aboutInfo"
+        android:icon="@drawable/help"
+        android:title="@string/publishing"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/addLocation"
+        android:icon="@drawable/location"
+        android:title="@string/search_location"
+        app:showAsAction="ifRoom" />
+</menu>

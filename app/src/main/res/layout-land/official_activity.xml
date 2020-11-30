@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/officialActConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/userLocationOAPortrait"
+                android:layout_width="408dp"
+                android:layout_height="29dp"
+                android:layout_marginEnd="3dp"
+                android:text="@string/locationOA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/govPosOAPortrait"
+                android:layout_width="260dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="76dp"
+                android:text="@string/stateposition"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.081"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userLocationOAPortrait" />
+
+            <TextView
+                android:id="@+id/name_of_politicianOA"
+                android:layout_width="299dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="76dp"
+                android:layout_marginEnd="60dp"
+                android:text="@string/name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageOfPolitician"
+                android:layout_width="279dp"
+                android:layout_height="272dp"
+                android:layout_marginTop="76dp"
+                android:layout_marginEnd="28dp"
+                android:contentDescription="@string/pictureofpolitician"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/missing" />
+
+            <TextView
+                android:id="@+id/political_association"
+                android:layout_width="180dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="76dp"
+                android:text="@string/textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addressOAPortrait"
+                android:layout_width="116dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="116dp"
+                android:text="@string/adress"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/adressInfo"
+                android:layout_width="230dp"
+                android:layout_height="146dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="45dp"
+                android:text="@string/specific_address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.019"
+                app:layout_constraintStart_toEndOf="@+id/addressOAPortrait"
+                app:layout_constraintTop_toBottomOf="@+id/name_of_politicianOA" />
+
+            <ImageButton
+                android:id="@+id/politicalLogo"
+                android:layout_width="66dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="216dp"
+                android:layout_marginEnd="172dp"
+                android:contentDescription="@string/demorrepub"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageOfPolitician"
+                app:srcCompat="@drawable/dem_logo" />
+
+            <TextView
+                android:id="@+id/phoneNumberOAPortrait"
+                android:layout_width="130dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="9dp"
+                android:text="@string/phone_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adressInfo" />
+
+            <TextView
+                android:id="@+id/phoneNumberInfo"
+                android:layout_width="210dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/textview"
+                app:layout_constraintStart_toEndOf="@+id/phoneNumberOAPortrait"
+                app:layout_constraintTop_toBottomOf="@+id/adressInfo" />
+
+            <TextView
+                android:id="@+id/websiteOAPortrait"
+                android:layout_width="129dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/textview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneNumberOAPortrait" />
+
+            <TextView
+                android:id="@+id/websiteLink"
+                android:layout_width="190dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="380dp"
+                android:text="@string/weblink"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneNumberInfo" />
+
+            <ImageButton
+                android:id="@+id/faceBookClicker"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:contentDescription="@string/gotofb"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/websiteOAPortrait"
+                app:srcCompat="@drawable/facebook" />
+
+            <ImageButton
+                android:id="@+id/twitterClicker"
+                android:layout_width="41dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/gototwitter"
+                app:layout_constraintStart_toEndOf="@+id/faceBookClicker"
+                app:layout_constraintTop_toBottomOf="@+id/websiteOAPortrait"
+                app:srcCompat="@drawable/twitter" />
+
+            <ImageButton
+                android:id="@+id/youTubeClicker"
+                android:layout_width="43dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="1dp"
+                android:contentDescription="@string/gotoyoutube"
+                app:layout_constraintStart_toEndOf="@+id/twitterClicker"
+                app:layout_constraintTop_toBottomOf="@+id/websiteOAPortrait"
+                app:srcCompat="@drawable/youtube" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
