@@ -10,20 +10,20 @@
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_government"
-        android:label="@string/app_name"
+        android:label="Know Your Government"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KnowYourGovernment">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.knowyourgovernment.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutActivity"></activity>
-        <activity android:name=".OfficialActivity"></activity>
-        <activity android:name=".PhotoDetailedActivity"></activity>
+        <activity android:name="com.example.knowyourgovernment.AboutActivity"></activity>
+        <activity android:name="com.example.knowyourgovernment.OfficialActivity"></activity>
+        <activity android:name="com.example.knowyourgovernment.PhotoDetailedActivity"></activity>
     </application>
 
 </manifest>

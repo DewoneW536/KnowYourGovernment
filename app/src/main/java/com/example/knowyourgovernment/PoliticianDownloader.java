@@ -142,8 +142,13 @@ public class PoliticianDownloader implements Runnable{
                     else{
                         phoneNum = "NULL";
                     }
-
-
+                    String email;
+                    if(officialObj.has("emails") && officialObj.getJSONArray("emails").length() != 0){
+                        email = officialObj.getJSONArray("emails").getString(0);
+                    }
+                    else{
+                        email = "NULL";
+                    }
                     String photoURL;
                     if(officialObj.has("photoUrl")){
                         photoURL = officialObj.getString("photoUrl");
@@ -167,7 +172,7 @@ public class PoliticianDownloader implements Runnable{
                         }
                     }
                     Official o = new Official(politicalOffice,name,party,poliLocation,website,phoneNum,
-                            photoURL,faceBook,twitter,youTube);
+                            email,photoURL,faceBook,twitter,youTube);
 
                     officialList.add(o);
                 }

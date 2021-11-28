@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Know Your Government</string>
+    <string name="app_name">Civil Advocacy</string>
     <string name="city_state_zip">City State Zip</string>
     <string name="official_title">Official Title</string>
     <string name="politician_name_and_party">Politician Name and Party</string>
@@ -13,7 +13,7 @@
     <string name="politician_picture">Politician Picture</string>
     <string name="official_activity_location_portrait">Official Activity Location Portrait</string>
     <string name="contact_info">contact_info</string>
-    <string name="addres">Addres:</string>
+    <string name="addres">Address:</string>
     <string name="phone">Phone:</string>
     <string name="website">Website:</string>
     <string name="youtubeclicker">youTubeClicker</string>
@@ -34,7 +34,7 @@
     <string name="locationOA">location</string>
     <string name="stateposition">statePosition</string>
     <string name="name">Name</string>
-    <string name="adress">Adress</string>
+    <string name="adress">Address</string>
     <string name="specific_address">Specific Address</string>
     <string name="phone_number">Phone Number:</string>
     <string name="weblink">webLink</string>
@@ -43,12 +43,17 @@
     <string name="gotofb">goToFB</string>
     <string name="gototwitter">goToTwitter</string>
     <string name="gotoyoutube">goToYouTube</string>
-    <string name="know_your_government">Know Your Government</string>
     <string name="powered_by">Powered by</string>
-    <string name="google_civic_information_api">Google Civic Information API</string>
+    <string name="google_civic_information_api"><u>Google Civic Information API</u></string>
     <string name="_2020_dewone_x_westerfield">\@2020, Dewone X Westerfield</string>
     <string name="version_1_0">Version 1.0</string>
     <string name="website2">Website:</string>
     <string name="demrepubornon">DemRepubOrNon</string>
-    <string name="adress2">Adress:</string>
+    <string name="adress2">Address:</string>
+    <string name="_2021_dewone_x_westerfield">2021, Dewone X Westerfield</string>
+    <string name="civic_advocacy">Civic Advocacy</string>
+    <string name="civil_advocacy">Civil Advocacy</string>
+    <string name="specific_email">specific Email</string>
+    <string name="email">Email:</string>
+    <string name="know_your_government">Know Your Government</string>
 </resources>

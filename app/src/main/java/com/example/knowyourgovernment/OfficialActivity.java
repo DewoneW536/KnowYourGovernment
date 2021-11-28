@@ -3,23 +3,16 @@ package com.example.knowyourgovernment;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.util.Linkify;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 public class OfficialActivity extends AppCompatActivity {
@@ -38,8 +31,10 @@ public class OfficialActivity extends AppCompatActivity {
     private TextView addressContent;
     private TextView phoneNumContent;
     private TextView websiteLink;
+    private TextView emailLink;
 
     private ConstraintLayout background2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -78,27 +73,51 @@ public class OfficialActivity extends AppCompatActivity {
             background2.setBackgroundColor(Color.RED);
             partyLogo.setImageDrawable(getResources().getDrawable(R.drawable.rep_logo));
         }
-        else {background2.setBackgroundColor(Color.BLACK);}
+        else {
+            background2.setBackgroundColor(Color.BLACK);
+            partyLogo.setVisibility(View.INVISIBLE);
+        }
 
         picOfPolitician = (ImageView) findViewById(R.id.imageOfPolitician);
 
         addressContent = findViewById(R.id.adressInfo);
-        addressContent.setText(o.getAddress());
+        if(!o.getAddress().equals("NULL")){
+            addressContent.setText(o.getAddress());
+            Linkify.addLinks(addressContent,Linkify.MAP_ADDRESSES);
+        }
 
         phoneNumContent = findViewById(R.id.phoneNumberInfo);
-        phoneNumContent.setText(o.getPhoneNumber());
+        if(!o.getPhoneNumber().equals("NULL")){
+            phoneNumContent.setText(o.getPhoneNumber());
+            Linkify.addLinks(phoneNumContent,Linkify.PHONE_NUMBERS);
+        }
 
         websiteLink = findViewById(R.id.websiteLink);
-        websiteLink.setText(o.getWebSite());
+        if(!o.getWebSite().equals("NULL")){
+            websiteLink.setText(o.getWebSite());
+            Linkify.addLinks(websiteLink,Linkify.WEB_URLS);
+        }
+
+        emailLink = findViewById(R.id.emailInfo);
+        if(!o.getEmail().equals("NULL")){
+            emailLink.setText(o.getEmail());
+            Linkify.addLinks(emailLink,Linkify.EMAIL_ADDRESSES);
+        }
 
         faceBookButton = findViewById(R.id.faceBookClicker);
         twitterButton = findViewById(R.id.twitterClicker);
         youTubeButton = findViewById(R.id.youTubeClicker);
+        //If politician has this form of social media, let it be seen, else make it invisible to users:
+        if(o.getFaceBook().equals("NULL"))faceBookButton.setVisibility(View.INVISIBLE);
+        if(o.getTwitter().equals("NULL"))twitterButton.setVisibility(View.INVISIBLE);
+        if(o.getYouTube().equals("NULL"))youTubeButton.setVisibility(View.INVISIBLE);
+
 
         //Make the links clickable, need to create intents so websites can be accessed though.
-        Linkify.addLinks(addressContent,Linkify.MAP_ADDRESSES);
-        Linkify.addLinks(phoneNumContent,Linkify.PHONE_NUMBERS);
-        Linkify.addLinks(websiteLink,Linkify.WEB_URLS);
+
+
+
+
 
         Picasso.get().load(o.getImage()).error(R.drawable.missing).placeholder(R.drawable.placeholder).
                 into(picOfPolitician);
@@ -124,7 +143,6 @@ public class OfficialActivity extends AppCompatActivity {
         } catch (Exception e) {
             intent = new Intent(Intent.ACTION_VIEW, Uri.parse(FACEBOOK_URL));
         }
-
         startActivity(intent);
     }
     public void onClickTwitter(View v){
@@ -170,6 +188,21 @@ public class OfficialActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+    }
+    public void onClickPhoto(View v){
+        //If Picasso is able to pull up a picture of the Politician,
+        //Take user to the next activity (photoDetailActivity)
+        //which should have all the information for this politician created
+        Intent intent = getIntent();
+        final Official o = (Official)intent.getSerializableExtra("official");
+        String image = o.getImage();
+        if(!image.equals("NULL")){
+            Intent switchIntent = new Intent(this,PhotoDetailedActivity.class);
+            switchIntent.putExtra("official",o);
+            switchIntent.putExtra("location",userLocation.getText().toString());
+            //OfficialActivity.this.startActivity(switchIntent);
+            startActivity(switchIntent);
+        }
     }
 
 }

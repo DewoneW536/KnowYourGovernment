@@ -1,8 +1,5 @@
 package com.example.knowyourgovernment;
 
-import android.widget.ImageButton;
-import android.widget.ImageView;
-
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -13,19 +10,21 @@ public class Official implements Serializable, Comparable<Official> {
     private String address;
     private String webSiteLink;
     private String phoneNumber;
+    private String email;
     private String image;
     private String faceBook;
     private String twitter;
     private String youTube;
 
     public Official(String govTitle,String politicianName,String politicalParty,String address,String webSite,String phoneNumber,
-                    String image, String faceBook, String twitter,String youTube){
+                    String email,String image, String faceBook, String twitter,String youTube){
         this.govTitle = govTitle;
         this.politicianName = politicianName;
         this.politicalParty = politicalParty;
         this.address = address;
         this.webSiteLink = webSite;
         this.phoneNumber = phoneNumber;
+        this.email = email;
         this.image = image;
         this.faceBook = faceBook;
         this.twitter = twitter;
@@ -36,6 +35,7 @@ public class Official implements Serializable, Comparable<Official> {
     public String getPoliticalParty(){return politicalParty;}
     public String getAddress(){return address;}
     public String getPhoneNumber(){return phoneNumber;}
+    public String getEmail(){return email;}
     public String getImage(){return image;}
     public String getFaceBook(){return faceBook;}
     public String getTwitter(){return twitter;}

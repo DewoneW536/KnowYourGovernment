@@ -64,7 +64,7 @@
         android:layout_marginStart="78dp"
         android:layout_marginTop="167dp"
         android:layout_marginEnd="78dp"
-        android:text="@string/_2020_dewone_x_westerfield"
+        android:text="@string/_2021_dewone_x_westerfield"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"

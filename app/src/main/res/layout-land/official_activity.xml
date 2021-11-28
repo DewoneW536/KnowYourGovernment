@@ -23,11 +23,16 @@
 
             <TextView
                 android:id="@+id/userLocationOAPortrait"
-                android:layout_width="408dp"
-                android:layout_height="29dp"
+                android:layout_width="723dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginEnd="3dp"
+                android:background="#55385A"
                 android:text="@string/locationOA"
+                android:textAlignment="center"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,6 +44,9 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="76dp"
                 android:text="@string/stateposition"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.081"
                 app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +60,10 @@
                 android:layout_marginTop="76dp"
                 android:layout_marginEnd="60dp"
                 android:text="@string/name"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.075"
                 app:layout_constraintStart_toStartOf="parent"
@@ -59,11 +71,12 @@
 
             <ImageView
                 android:id="@+id/imageOfPolitician"
-                android:layout_width="279dp"
-                android:layout_height="272dp"
+                android:layout_width="287dp"
+                android:layout_height="310dp"
                 android:layout_marginTop="76dp"
                 android:layout_marginEnd="28dp"
                 android:contentDescription="@string/pictureofpolitician"
+                android:onClick="onClickPhoto"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/missing" />
@@ -75,6 +88,9 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="76dp"
                 android:text="@string/textview"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,10 +98,11 @@
                 android:id="@+id/addressOAPortrait"
                 android:layout_width="116dp"
                 android:layout_height="29dp"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="116dp"
                 android:text="@string/adress"
                 android:textAlignment="viewStart"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,6 +114,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="45dp"
                 android:text="@string/specific_address"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.019"
                 app:layout_constraintStart_toEndOf="@+id/addressOAPortrait"
@@ -104,10 +122,10 @@
 
             <ImageButton
                 android:id="@+id/politicalLogo"
-                android:layout_width="66dp"
-                android:layout_height="53dp"
-                android:layout_marginTop="216dp"
-                android:layout_marginEnd="172dp"
+                android:layout_width="117dp"
+                android:layout_height="108dp"
+                android:layout_marginTop="224dp"
+                android:layout_marginEnd="116dp"
                 android:contentDescription="@string/demorrepub"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageOfPolitician"
@@ -117,9 +135,10 @@
                 android:id="@+id/phoneNumberOAPortrait"
                 android:layout_width="130dp"
                 android:layout_height="31dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="9dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/phone_number"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/adressInfo" />
 
@@ -128,8 +147,9 @@
                 android:layout_width="210dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/textview"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toEndOf="@+id/phoneNumberOAPortrait"
                 app:layout_constraintTop_toBottomOf="@+id/adressInfo" />
 
@@ -138,27 +158,29 @@
                 android:layout_width="129dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="48dp"
                 android:text="@string/textview"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/phoneNumberOAPortrait" />
 
             <TextView
                 android:id="@+id/websiteLink"
-                android:layout_width="190dp"
-                android:layout_height="56dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="380dp"
+                android:layout_width="192dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="368dp"
                 android:text="@string/weblink"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/phoneNumberInfo" />
 
             <ImageButton
                 android:id="@+id/faceBookClicker"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="2dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/gotofb"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/websiteOAPortrait"
@@ -166,9 +188,10 @@
 
             <ImageButton
                 android:id="@+id/twitterClicker"
-                android:layout_width="41dp"
-                android:layout_height="38dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/gototwitter"
                 app:layout_constraintStart_toEndOf="@+id/faceBookClicker"
                 app:layout_constraintTop_toBottomOf="@+id/websiteOAPortrait"
@@ -176,14 +199,15 @@
 
             <ImageButton
                 android:id="@+id/youTubeClicker"
-                android:layout_width="43dp"
-                android:layout_height="39dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="1dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/gotoyoutube"
                 app:layout_constraintStart_toEndOf="@+id/twitterClicker"
                 app:layout_constraintTop_toBottomOf="@+id/websiteOAPortrait"
                 app:srcCompat="@drawable/youtube" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
